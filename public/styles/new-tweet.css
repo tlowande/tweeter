@@ -1,0 +1,28 @@
+#btn {
+  background-color: #4056A1;
+  color:white;
+  font-family: 'Bungee', cursive, sans-serif;
+  float:left;
+  margin-left:10%
+ 
+}
+
+.new-tweet form textarea {
+  display: inline-block;
+  outline: none;
+  resize:none;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #000000;
+  margin:0 10%; 
+  width: 80%;
+  height:10;
+  line-height: 1;
+  height: 40px
+}
+form span{
+  font-family: 'Bungee', cursive, sans-serif;
+  float:right;
+  margin-right:10%
+ 
+}
