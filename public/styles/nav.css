@@ -1,0 +1,27 @@
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#logo {
+  font-family: 'Bungee', cursive, sans-serif;
+  position: relative;
+  top: 1.5em;
+  left: 1.5em
+}
+
+#action {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em
+}
+
+#action span {
+  font-weight: bold
+}
