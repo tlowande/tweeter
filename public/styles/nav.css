@@ -11,7 +11,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.5em
+  align-items: center;
+  padding: 1.5em;
 }
 
 #logo {
@@ -20,7 +21,7 @@ nav {
 }
 
 #logo i {
-  padding: 10px;
+  padding-right: 15px;
 }
 
 #logo:hover i {
@@ -79,5 +80,11 @@ nav {
   #action:hover i {
     color: #fda77f;
   }
-  
+}
+
+@media only screen and (max-width: 425px) {
+nav {
+  font-size: smaller;
+  padding: 8px;
+  }
 }
