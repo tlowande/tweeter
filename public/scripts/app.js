@@ -7,8 +7,7 @@ $(document).ready(function () {
     if(y > 200){
     $('.scroll').fadeIn();
     $('nav div').fadeOut('slow');
-
-    } else {
+    } else { 
       $('.scroll').fadeOut('slow');
       $('nav div').fadeIn();
     }

@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -40,41 +41,42 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
+    <div class='content-main'>
+       <!-- User information-->
+      <header id="web-head">
+        <div class='avatar'>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class='avatar'>
+            <h2>Claire <span>Loo</span></h2>
+        </div>
+      </header>
 
-     <!-- User information-->
-    <header id="head1">
-      <div class='avatar'>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class='avatar'>
-          <h2>Claire <span>Loo</span></h2>
-      </div>
-    </header>
 
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <button type='button' class='scroll'>
-          <i class="fas fa-arrow-circle-up arrow"></i>
-      </button>
-      <div class="hide-n-seek">
-        <section class="new-tweet">
-          <div class='error-msg'>
-          </div>
-          <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets/">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <div id="submits">
-              <input type="submit" value="Tweet" id="btn">
-              <span class="counter">140</span>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <button type='button' class='scroll'>
+            <i class="fas fa-arrow-circle-up arrow"></i>
+        </button>
+        <div class="hide-n-seek">
+          <section class="new-tweet">
+            <div class='error-msg'>
             </div>
-          </form>
-        </section>
-      </div>
-      <div id='myTweets'>
-      </div>
-    </main>
+            <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets/">
+              <textarea name="text" placeholder="What are you humming   about?"></textarea>
+              <div id="submits">
+                <input type="submit" value="Tweet" id="btn">
+                <span class="counter">140</span>
+              </div>
+            </form>
+          </section>
+        </div>
+        <div id='myTweets'>
+        </div>
+      </main>
+    </div>
   </body>
 
 

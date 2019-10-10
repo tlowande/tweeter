@@ -46,7 +46,7 @@
 
 #btn {
   background-color:#c9d99e;
-  color:rgb(79, 75, 75);
+  color:#4f4b4b;
   outline: none;
 }
 
@@ -55,3 +55,8 @@
 }
 
 
+@media only screen and (min-width: 1024px) {
+  .hide-n-seek {
+    margin-top: 120px;
+  }
+}

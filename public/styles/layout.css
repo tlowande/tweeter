@@ -20,18 +20,15 @@ body {
   background-color: #fae8c8;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  
 }
 
 
 .container {
-  position:absolute;
-  top:520px;
-  width:100%;
+  top: 520px;
   background-color: #fae8c8;
-  padding: 25px 25px;
+  padding-top: 25px;
   text-align: center;
-
+  flex: 2;
 }
 
 .container .scroll {
@@ -51,4 +48,13 @@ body {
 
 .container .scroll:hover{
   color:#445c3c;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container .scroll{
+    right:1em
+  }
+  .container {
+    margin-left:50px;
+  }
 }
