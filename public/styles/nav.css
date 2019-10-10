@@ -7,7 +7,7 @@ nav {
   height: 120px;
   background-color: #fda77f;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  color:#4f4b4b;
+  color: #4f4b4b;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +20,7 @@ nav {
 }
 
 #logo i {
-  padding:10px;
+  padding: 10px;
 }
 
 #logo:hover i {
@@ -67,17 +67,17 @@ nav {
 }
 
 #action:hover i {
-  color:#fae8c8;
+  color: #fae8c8;
 }
   
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #445c3c;
-    background-image:none;
+    background-image: none;
     color: #c9d99e;
   }
   #action:hover i {
-    color:#fda77f;
+    color: #fda77f;
   }
   
 }

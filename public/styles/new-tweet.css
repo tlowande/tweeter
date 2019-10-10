@@ -1,52 +1,52 @@
 .hide-n-seek {
-  display:none;
+  display: none;
 }
 
 .new-tweet {
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 0 10%
 }
 
 .container .new-tweet .error-msg{
-  display:none;
+  display: none;
   color: #aa2b05;
   border-radius: 5px;
 }
 .new-tweet form {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
 .new-tweet form #submits{
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Bungee', cursive, sans-serif;
   margin-top: 0.5em;
-  outline:none;
+  outline: none;
 
 }
 .new-tweet form textarea {
-  overflow:auto ;
+  overflow: auto ;
   outline: none;
-  resize:none;
+  resize: none;
   background: transparent;
   border: none;
   border-bottom: 3px solid #000000;
-  margin:auto; 
+  margin: auto; 
   width: 100%;
   line-height: 1;
   height: 40px;
 }
 
 .red {
-  color:red
+  color: red
 }
 
 #btn {
-  background-color:#c9d99e;
-  color:#4f4b4b;
+  background-color: #c9d99e;
+  color: #4f4b4b;
   outline: none;
 }
 

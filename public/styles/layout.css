@@ -32,29 +32,29 @@ body {
 }
 
 .container .scroll {
-  background:none;
-  border:none;
-  position:fixed;
-  border-radius:100%;
-  color:#c9d99e;
+  background: none;
+  border: none;
+  position: fixed;
+  border-radius: 100%;
+  color: #c9d99e;
   right: 2em;
-  bottom:2.5em;
-  height:50px;
-  transform:scale(2,2);
-  display:none;
-  outline:none;
+  bottom: 2.5em;
+  height: 50px;
+  transform: scale(2,2);
+  display: none;
+  outline: none;
  
 }
 
 .container .scroll:hover{
-  color:#445c3c;
+  color: #445c3c;
 }
 
 @media only screen and (min-width: 1024px) {
   .container .scroll{
-    right:1em
+    right: 1em
   }
   .container {
-    margin-left:50px;
+    margin-left: 50px;
   }
 }
