@@ -17,21 +17,38 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #fae8c8;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   
 }
 
+
 .container {
   position:absolute;
   top:520px;
-  width:90%;
-  background-color: #f4f1ec;
-  margin:0 5%; 
+  width:100%;
+  background-color: #fae8c8;
+  padding: 25px 25px;
   text-align: center;
 
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+.container .scroll {
+  background:none;
+  border:none;
+  position:fixed;
+  border-radius:100%;
+  color:#c9d99e;
+  right: 2em;
+  bottom:2.5em;
+  height:50px;
+  transform:scale(2,2);
+  display:none;
+  outline:none;
+ 
+}
+
+.container .scroll:hover{
+  color:#445c3c;
+}

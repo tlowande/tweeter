@@ -1,8 +1,8 @@
-header {
+#head1 {
   position: relative;
   height: 400px;
   width: 100%;
-  background-color: #d8981f;
+  background-color: #fda77f;
 
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
   top:120px;
@@ -13,7 +13,8 @@ header {
   left: 50%;
   transform: translateX(-50%);
   display:inline-block;
-  color:white
+  color:#fae8c8;
+  padding-top:10px;
 }
 
 h2 span {

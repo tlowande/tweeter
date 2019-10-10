@@ -15,23 +15,34 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweeters.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://kit.fontawesome.com/6059e82a4d.js" crossorigin="anonymous"></script>
+
+
+
+
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id='logo'>tweeter</span> <div id='action'><span>Write</span> a new tweet</div>
+      <span id='logo'><i class="fas fa-pastafarianism"></i>tweeter</span> 
+      <div id='action'>
+        <div><span>Write</span> a new tweet</div> 
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
 
      <!-- User information-->
-    <header>
+    <header id="head1">
       <div class='avatar'>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -39,20 +50,32 @@
       <div class='avatar'>
           <h2>Claire <span>Loo</span></h2>
       </div>
-  </header>
+    </header>
 
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
-          <textarea name="text" maxlength="140" wrap="off" row="1" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet" id="btn">
-          <span class="counter">140</span>
-        </form>
-      </section>
+      <button type='button' class='scroll'>
+          <i class="fas fa-arrow-circle-up arrow"></i>
+      </button>
+      <div class="hide-n-seek">
+        <section class="new-tweet">
+          <div class='error-msg'>
+          </div>
+          <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets/">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <div id="submits">
+              <input type="submit" value="Tweet" id="btn">
+              <span class="counter">140</span>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div id='myTweets'>
+      </div>
     </main>
-
   </body>
+
+
 </html>
