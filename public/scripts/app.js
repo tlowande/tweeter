@@ -87,10 +87,14 @@ $(document).ready(function () {
 
   const renderTweets = function (tweets) {
     $('.container #myTweets').empty();
+    
+    const tweetInput = [];
+
     for (let t of tweets.reverse()) {
       let chunck = createTweetElement(t)
-      $('.container #myTweets').append(chunck)
+      tweetInput.push(chunck);
     }
+    $('.container #myTweets').append(tweetInput.join(''));
   }
 
   $('form').submit(function (event) {
