@@ -1,0 +1,130 @@
+<html>
+<head><title>Fuzzy Search</title>
+<script id="algorithm">
+//This algorithm is an original work by Andrew Matte in Toronto, andrew.matte@gmail.com
+//You are completely free to do whatever you want with this algorithm but,
+//please credit me if the project is open source. Also there is no warranty that is it perfectly suited to your use case.
+//Written originally in Visual Basic to replace VLOOKUP's fuzzy lookup in Microsoft Excel
+//in 2014, implemented in MS-SQL, Python, and JS.
+//Apologies for any similarities to an algorithm you personally might have written independently.
+var proximity = (wordA, wordB) => {
+  a = oneWayDist(wordA,wordB);
+  b = oneWayDist(wordB,wordA);
+  s = a[0] + b[0];
+  a = a[1] + b[1];
+  return(s/(s+a));
+}
+
+var oneWayDist = (wA,wB) => {
+  let score = 0;
+  let against = 0;
+  for(let x=0; x<(wA.length-1); x++){
+    for(let y=x+1; (y-1)<wA.length; y++){
+      if(wB.indexOf(wA.slice(x,y))>=0){
+        score += (y-x)*2;
+      } else {
+        against++;
+      }
+    }
+  }
+  return([score,against]);
+}
+</script>
+<script id="data">
+const names =
+['Brittani Binkley',
+'Francine Felix',
+'Nestor Nack',
+'Catalina Couvillion',
+'Emilia Eggleton',
+'Lavonda Leduc',
+'Abraham Alleman',
+'Talisha Tone',
+'Melia Marois',
+'Toshia Tellier',
+'Louann Lashbrook',
+'Carlton Corral',
+'Freida Faucett',
+'Kaley Koehl',
+'Kamilah Kearl',
+'In Ivery',
+'Tisa Taunton',
+'Verda Vath',
+'Josette Jimmerson',
+'Lucilla Leamon',
+'Miranda Maclennan',
+'Maryjane Minick',
+'Delinda Dearborn',
+'Kelly Kazmierczak',
+'Boris Brundage',
+'Joetta Jean',
+'Karena Knipp',
+'Ferdinand Fay',
+'Maud Mcnitt',
+'Arianna Arms',
+'Thalia Tibbitts',
+'Barbara Basden',
+'Helga Hockaday',
+'Isa Ikard',
+'Julianne Jelks',
+'Lawanna Longmire',
+'Eneida Escoto',
+'Julie Jelks',
+'Tomasa Tremaine',
+'Clinton Chavarria',
+'Fabian Frasher',
+'Tricia Taff',
+'Nila Narducci',
+'Adrian Applegate',
+'Winona Watford',
+'Loise Lambson',
+'Jannette Jasmin',
+'Geralyn Garibay',
+'Lori Lachermeier',
+'Antonina Aden',
+];
+//names generated with http://listofrandomnames.com/index.cfm
+</script>
+<script id="algoImpentation">
+function rearrange() {
+  //get user input
+  let user_input = document.getElementById('searchTerm').value.toLowerCase();
+  let threshold = document.getElementById('threshold').value;
+  //get list of names in lower case
+  let data = names.map(e => e.toLowerCase());
+  //compute distance from input per element
+  let computed = data.map((element, i) => {
+    let newRow = [data[i]];
+    newRow.push(proximity(user_input, newRow[0]));
+    return newRow;
+  });
+  console.log(computed);
+  //filter out sub-standard matches
+  let filtered = computed.filter((element) => {
+    return threshold <= element[element.length -1];
+  });
+  //set up sorting function
+  let sorted = filtered.sort((a,b) => {
+    return(b[1] - a[1]);
+  });
+  //put the first element per list into html
+  let output = sorted.map((e) => {return e[0];}).join('</li><li>')
+  //display
+  document.getElementById('nameList').innerHTML = ('<ol><li>' + output + '</li><ol>');
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Fuzzy Search Demo</h1>
+<p>There are 50 names in a list on this page.<br />
+Typing into the box will arrange them from closest to farthest to your input.<br />
+Typos are encouraged.</p>
+<p><input type='text' id='searchTerm' placeholder='type here...' onkeyup="rearrange()"><br />
+This numeric value should be between 0 and 1. The higher the number, the stricter the threshold.<br />
+<input type='number' id='threshold' value='0.15'>
+</p><hr>
+<div id='nameList'></div>
+</center>
+</body>
+</html>
