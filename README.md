@@ -12,7 +12,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 #### Mobile mainpage
 
-!["Mobile main page"](./docs/Tweeter.mp4)
+!["Mobile main page"](./docs/Tweeter.gif)
 
 ## Getting Started
 
