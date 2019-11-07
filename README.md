@@ -6,8 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+#### Desktop mainpage
 !["Desktop main page"](./docs/DesktopMainPage.png)
-!["Mobile main page"](./docs/MobileMainPage.png)
+
+#### Mobile mainpage
+!["Mobile main page"](https://drive.google.com/open?id=1SVeBncyvvjUaz6VhgWLQ9Cm7SG1Phuy7)
 
 
 
