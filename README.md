@@ -12,7 +12,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 #### Mobile mainpage
 
-!["Mobile main page"](https://drive.google.com/uc?export=view&id=1SVeBncyvvjUaz6VhgWLQ9Cm7SG1Phuy7)
+!["Mobile main page"](https://drive.google.com/file/d/1SVeBncyvvjUaz6VhgWLQ9Cm7SG1Phuy7/view?usp=sharing)
 
 ## Getting Started
 
