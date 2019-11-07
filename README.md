@@ -6,7 +6,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Desktop main page"](./docs/Login_Page)
+#### Desktop mainpage
+
+!["Desktop main page"](./docs/DesktopMainPage.png)
+
+#### Mobile mainpage
+
 !["Mobile main page"](./docs/Tweeter.mp4)
 
 ## Getting Started
