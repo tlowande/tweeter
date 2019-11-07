@@ -11,7 +11,7 @@ This repository is the starter code for the project: Students will fork and clon
 !["Desktop main page"](./docs/DesktopMainPage.png)
 
 #### Mobile mainpage
-<img src="./docs/Tweeter.gif" alt="Mobile" width="500"/>
+<img src="./docs/Tweeter.gif" alt="Mobile" width="500" style="margin-left:20%"/>
 
 ## Getting Started
 
